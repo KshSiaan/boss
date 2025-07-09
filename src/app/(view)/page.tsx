@@ -20,8 +20,8 @@ import {
 export default function Home() {
   return (
     <>
-      <header className="h-[calc(100dvh-64px)] w-dvw mt-16  relative">
-        <h1 className="text-6xl pt-[7%] pb-8 text-center">
+      <header className="h-[calc(100dvh-64px)] w-dvw  relative">
+        <h1 className="text-6xl pt-[7%] pb-8 text-center font-medium">
           Do <span className="text-primary">Business</span> with <br />
           the best
         </h1>
