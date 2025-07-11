@@ -10,8 +10,12 @@ import {
 } from "@/components/ui/navigation-menu";
 import React from "react";
 import { Button } from "../ui/button";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
+  const path = usePathname();
+
   return (
     <>
       <div className="h-16"></div>
@@ -29,7 +33,10 @@ export default function Navbar() {
             <NavigationMenuList className="gap-6 justify-center text-sm">
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/become" className="">
+                  <Link
+                    href="/become"
+                    className={cn(path.includes("/become") && "text-primary")}
+                  >
                     Become a Boss Pro
                   </Link>
                 </NavigationMenuLink>
@@ -51,7 +58,7 @@ export default function Navbar() {
                         </p>
                       </div>
                     </Link>
-                    <Link href="/about">
+                    <Link href="/boss-pro">
                       <div className="border border-transparent hover:border-gray-300 rounded-lg text-sm p-2">
                         <p className="font-medium">
                           What makes a Pro freelancer
@@ -66,9 +73,9 @@ export default function Navbar() {
                   <div className="">
                     <div className="">
                       <p className="font-semibold mb-4 px-2">Resources</p>
-                      <Link href="/about">
+                      <Link href="/stories">
                         <div className="border border-transparent hover:border-gray-300 rounded-lg text-sm p-2">
-                          <p className="font-medium">Success storieso</p>
+                          <p className="font-medium">Success stories</p>
                           <p className="text-sm pt-2">
                             Read why companies are adopting Boss Pro
                           </p>
@@ -90,7 +97,10 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/contact" className="">
+                  <Link
+                    href="/contact"
+                    className={cn(path.includes("/contact") && "text-primary")}
+                  >
                     Contact Sales
                   </Link>
                 </NavigationMenuLink>
@@ -102,7 +112,6 @@ export default function Navbar() {
         {/* Right Side */}
         <div className="flex-1 flex justify-end gap-2 items-center">
           <Button variant="ghost">Sign In</Button>
-
           <Button className="">JOIN</Button>
         </div>
       </nav>
