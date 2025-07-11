@@ -74,7 +74,7 @@ export default function Navbar() {
                           </p>
                         </div>
                       </Link>
-                      <Link href="/about">
+                      <Link href="/help">
                         <div className="border border-transparent hover:border-gray-300 rounded-lg text-sm p-2">
                           <p className="font-medium">Help Center</p>
                           <p className="text-sm pt-2">

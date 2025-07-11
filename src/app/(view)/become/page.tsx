@@ -15,35 +15,24 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import HeroSec from "@/components/core/extra/hero-sec";
 
 export default function Page() {
   return (
     <>
-      <header className="h-[calc(100dvh-64px)] w-dvw relative flex flex-col justify-center items-center">
-        <h1 className="text-6xl pt-[7%] pb-8 text-center font-medium">
-          <span className="text-primary">Connect</span> with clients <br /> in
-          your <span className="text-primary">league</span>
-        </h1>
-        <p className="text-center text-xl font-medium">
-          Top vetted talent, ready to help you bring your ideas to life
-        </p>
-        <p className="w-1/2 mx-auto block text-center pt-4 text-sm leading-relaxed">
-          Connect with top-tier freelancers ready to bring your vision to life.
+      <HeroSec
+        title={
+          <>
+            <span className="text-primary">Connect</span> with clients <br /> in
+            your <span className="text-primary">league</span>
+          </>
+        }
+        sub="Top vetted talent, ready to help you bring your ideas to life"
+        desc="Connect with top-tier freelancers ready to bring your vision to life.
           Our platform offers experts in design, development, marketing, and
           writing to meet your specific needs. Discover the talent that can
-          elevate your project
-        </p>
-        <div className="w-full flex justify-center items-center gap-4 my-8!">
-          <Button className="uppercase px-8! py-6!">Explore Services</Button>
-          <Button
-            variant="outline"
-            className="border border-foreground px-8! py-6! uppercase"
-          >
-            Join as a Pro
-          </Button>
-        </div>
-        <div className="mt-[7%]"></div>
-      </header>
+          elevate your project"
+      />
       <main>
         <section>
           <h1 className="text-5xl pt-[7%] pb-8 text-center font-medium">
