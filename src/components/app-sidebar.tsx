@@ -17,6 +17,7 @@ import {
   UsersIcon,
   WalletCardsIcon,
 } from "lucide-react";
+import Link from "next/link";
 
 const preURL = "/dashboard";
 const data = {
@@ -60,7 +61,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem className="pt-6">
-            <span className="text-3xl font-bold p-8">BOSS</span>
+            <Link href="/">
+              <span className="text-3xl font-bold p-8 hover:text-muted-foreground transition-colors">
+                BOSS
+              </span>
+            </Link>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
