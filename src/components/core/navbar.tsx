@@ -12,6 +12,15 @@ import React from "react";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog";
+import SignIn from "./sign-in";
+import JoinPopup from "./join-popup";
 
 export default function Navbar() {
   const path = usePathname();
@@ -111,8 +120,29 @@ export default function Navbar() {
 
         {/* Right Side */}
         <div className="flex-1 flex justify-end gap-2 items-center">
-          <Button variant="ghost">Sign In</Button>
-          <Button className="">JOIN</Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="ghost">Sign In</Button>
+            </DialogTrigger>
+            <DialogContent className="min-w-[90dvw] rounded-4xl px-6 pb-6">
+              <DialogHeader className="hidden">
+                <DialogTitle></DialogTitle>
+              </DialogHeader>
+              <SignIn />
+            </DialogContent>
+          </Dialog>
+
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button className="">JOIN</Button>
+            </DialogTrigger>
+            <DialogContent className="min-w-[90dvw] rounded-4xl px-6 pb-6">
+              <DialogHeader className="hidden">
+                <DialogTitle></DialogTitle>
+              </DialogHeader>
+              <JoinPopup />
+            </DialogContent>
+          </Dialog>
         </div>
       </nav>
     </>
