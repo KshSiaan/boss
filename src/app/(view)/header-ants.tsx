@@ -15,7 +15,7 @@ const floatTransition = {
 
 export default function HeaderAnts(): JSX.Element {
   return (
-    <div className="absolute h-full w-full top-0 left-0 -z-10 overflow-hidden">
+    <div className="absolute h-full w-full top-0 left-0 -z-10 overflow-hidden hidden lg:block">
       <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{ ...floatTransition.y, delay: 0 }}
@@ -58,7 +58,7 @@ export default function HeaderAnts(): JSX.Element {
       <motion.div
         animate={{ y: [0, 20, 0] }}
         transition={{ ...floatTransition.y, delay: 1.5 }}
-        className="absolute w-[450px] top-1/2 right-[12.5%]"
+        className="absolute w-[450px] top-1/2 right-0 xl:right-[12.5%]"
       >
         <Image
           height={100}

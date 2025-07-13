@@ -7,27 +7,27 @@ import FAQSec from "@/components/core/extra/faq-sec";
 export default function Page() {
   return (
     <main className="my-[100px]">
-      <section className="grid grid-cols-2 gap-6 px-4 lg:px-[7%] h-[calc(100dvh-124px)]">
-        <div className="space-y-8">
-          <h1 className="text-5xl font-semibold">
+      <section className="grid lg:grid-cols-2 gap-6 px-4 lg:px-[7%] lg:h-[calc(100dvh-124px)]">
+        <div className="space-y-4 lg:space-y-8">
+          <h1 className="text-3xl lg:text-5xl font-semibold">
             Contact <span className="text-primary">Sales</span>
           </h1>
-          <p>
+          <p className="text-sm lg:text-base">
             We&apos;d love to hear from you! Whether you have a question, need
             assistance, or want to provide feedback, our team is here to help.
             Please fill out the form below, and we&apos;ll get back to you as
             soon as possible
           </p>
-          <ul className="space-y-6 list-inside">
+          <ul className="space-y-6 list-inside text-sm lg:text-base">
             {supportPoints.map((point, index) => (
-              <li key={index} className="flex items-center gap-6">
+              <li key={index} className="flex items-center gap-3 lg:gap-6">
                 <CheckIcon className="text-primary" />
                 {point}
               </li>
             ))}
           </ul>
         </div>
-        <div className="">
+        <div className="mt-6 lg:mt-0">
           <ContactForm />
         </div>
       </section>

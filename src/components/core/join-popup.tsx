@@ -2,19 +2,19 @@ import React from "react";
 import { Button } from "../ui/button";
 export default function JoinPopup() {
   return (
-    <div className="w-full h-[80dvh] grid grid-cols-2 gap-6">
+    <div className="w-full h-[70dvh] lg:h-[80dvh] grid lg:grid-cols-2 gap-6">
       <div
-        className="w-full h-full rounded-l-3xl rounded-r-md overflow-hidden bg-cover bg-center"
+        className="w-full h-full rounded-l-3xl rounded-r-md overflow-hidden bg-cover bg-center hidden lg:block"
         style={{ backgroundImage: `url("/image/join.jpg")` }}
       >
         <div className="w-full h-full bg-amber-600/30"></div>
       </div>
       <div className="flex flex-col h-full w-full justify-between">
         <div className="">
-          <h1 className="capitalize text-4xl font-medium text-primary">
+          <h1 className="capitalize text-xl lg:text-4xl font-medium text-primary">
             Welcome
           </h1>
-          <h1 className="capitalize text-4xl mb-12 font-medium">
+          <h1 className="capitalize text-xl lg:text-4xl mb-6 lg:mb-12 font-medium">
             Create your free Boss Account
           </h1>
         </div>

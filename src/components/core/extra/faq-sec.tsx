@@ -9,17 +9,17 @@ import {
 export default function FAQSec() {
   return (
     <section>
-      <h1 className="text-6xl text-center my-24! font-medium">
+      <h1 className="text-3xl lg:text-6xl text-center my-24! font-medium">
         FAQ<span className="text-primary">s</span>
       </h1>
 
-      <div className="p-12 px-24 pt-0">
+      <div className="p-12 px-4 lg:px-24 pt-0">
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((x, i) => (
             <AccordionItem value={String(i)} key={i}>
               <AccordionTrigger className="" plus>
                 <div className="">
-                  <span className="mr-12">0{i + 1}</span> {x.title}
+                  <span className="mr-12 line-clamp-1">0{i + 1}</span> {x.title}
                 </div>
               </AccordionTrigger>
               <AccordionContent className="flex flex-col gap-4 text-balance">

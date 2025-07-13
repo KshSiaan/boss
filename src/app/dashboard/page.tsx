@@ -115,7 +115,7 @@ export default function Page() {
                       </p>
                     </div>
                   </div>
-                  <div className="space-y-1">
+                  <div className="space-y-1 flex">
                     <Badge
                       variant="secondary"
                       className="bg-green-100 text-green-700 hover:bg-green-100"

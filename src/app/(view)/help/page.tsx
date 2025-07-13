@@ -15,31 +15,33 @@ import FAQSec from "@/components/core/extra/faq-sec";
 export default function Page() {
   return (
     <>
-      <header className="h-[calc(100dvh-64px)] w-dvw relative">
-        <h1 className="text-6xl pt-[7%] pb-8 text-center font-medium">
+      <header className="h-[calc(100dvh-64px)] w-dvw relative px-4 lg:px-0">
+        <h1 className="text-3xl lg:text-6xl pt-[7%] pb-8 text-center font-medium">
           How can we <span className="text-primary">help</span> you
         </h1>
-        <p className="text-center text-xl font-medium">
+        <p className="text-center text-base lg:text-xl font-medium">
           Empower your team to easily discover, manage, and collaborate with top
           freelancers
         </p>
-        <p className="w-1/2 mx-auto block text-center pt-4 text-sm leading-relaxed">
+        <p className="w-full lg:w-1/2 mx-auto block text-center pt-4 text-sm leading-relaxed">
           Connect with top-tier freelancers ready to bring your vision to life.
           Our platform offers experts in design, development, marketing, and
           writing to meet your specific needs. Discover the talent that can
           elevate your project
         </p>
-        <div className="w-full flex justify-center items-center gap-4 my-8!">
-          <Button className="uppercase px-8! py-6!">Explore Services</Button>
+        <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 my-8!">
+          <Button className="uppercase px-8! py-6! w-full lg:w-auto">
+            Explore Services
+          </Button>
           <Button
             variant="outline"
-            className="border border-foreground px-8! py-6! uppercase"
+            className="border border-foreground px-8! py-6! uppercase w-full lg:w-auto"
           >
             Join as a Pro
           </Button>
         </div>
-        <div className="mt-[7%]">
-          <div className="border border-primary/30 rounded-full w-1/2 flex items-center justify-between pl-2 mx-auto shadow-[0_0_100px_1px_#F4802550,0_0_40px_1px_#F4802510] bg-inherit">
+        <div className="mt-[7%] ">
+          <div className="border border-primary/30 rounded-full lg:w-1/2 flex items-center justify-between pl-2 mx-auto shadow-[0_0_100px_1px_#F4802550,0_0_40px_1px_#F4802510] bg-inherit">
             <Input
               className="border-0! outline-0! ring-0! shadow-none font-semibold text-sm bg-transparent"
               placeholder="Search for a skill...."
@@ -53,7 +55,7 @@ export default function Page() {
       <main className=" mb-12">
         <section className="px-4 lg:px-[7%]">
           <h1 className="text-4xl font-semibold mb-12">Help Topics</h1>
-          <div className="w-full mt-24 grid grid-cols-3 gap-6">
+          <div className="w-full mt-24 grid lg:grid-cols-3 gap-6">
             {helpTopics.map((x, i) => (
               <Card key={i}>
                 <CardContent className="items-start flex justify-start gap-4">

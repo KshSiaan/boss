@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function AboutGrid() {
   return (
     <section>
-      <div className="mt-12 px-4 lg:px-[7%] grid grid-cols-2 gap-6 mb-12">
+      <div className="mt-12 px-4 lg:px-[7%] grid lg:grid-cols-2 gap-6 mb-12">
         {about_grid.slice(0, 1).map((x, i) => (
           <Card key={i}>
             <CardHeader>
@@ -28,9 +28,9 @@ export default function AboutGrid() {
             </CardContent>
           </Card>
         ))}
-        <div className="w-full full grid grid-rows-2 gap-6">
+        <div className="w-full full grid lg:grid-rows-2 gap-6">
           {about_grid.slice(1, 3).map((x, i) => (
-            <Card key={i} className={`grid grid-cols-2 gap-2`}>
+            <Card key={i} className={`grid lg:grid-cols-2 gap-2`}>
               <CardContent className="space-y-2">
                 <CardTitle className="text-4xl">{x.title}</CardTitle>
                 <CardDescription>{x.desc}</CardDescription>
@@ -48,7 +48,7 @@ export default function AboutGrid() {
           ))}
         </div>
       </div>
-      <div className="mt-12 px-4 lg:px-[7%] grid grid-cols-3 gap-6 mb-12">
+      <div className="mt-12 px-4 lg:px-[7%] grid lg:grid-cols-3 gap-6 mb-12">
         {about_grid.slice(3, 7).map((x, i) => (
           <Card key={i}>
             <CardHeader>

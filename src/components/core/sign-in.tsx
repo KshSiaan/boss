@@ -34,19 +34,22 @@ export default function SignIn() {
     console.log(values);
   }
   return (
-    <div className="w-full h-auto grid grid-cols-2 gap-6">
+    <div className="w-full h-auto grid lg:grid-cols-2 gap-6">
       <div
-        className="w-full h-full rounded-l-3xl rounded-r-md overflow-hidden bg-cover bg-center"
+        className="w-full h-full rounded-l-3xl rounded-r-md overflow-hidden hidden lg:block bg-cover bg-center"
         style={{ backgroundImage: `url("/image/signin.jpg")` }}
       >
         <div className="w-full h-full bg-amber-600/30"></div>
       </div>
       <div className="">
-        <h1 className="capitalize text-4xl mb-12 font-medium">
+        <h1 className="capitalize text-xl lg:text-4xl mb-6 lg:mb-12 font-medium">
           sign in to boss pro
         </h1>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="space-y-4 lg:space-y-8"
+          >
             <FormField
               control={form.control}
               name="email_or_un"

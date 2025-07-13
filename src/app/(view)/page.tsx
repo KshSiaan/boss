@@ -16,35 +16,38 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import JoinComm from "@/components/core/extra/join-comm";
 
 export default function Home() {
   return (
     <>
       <header className="h-[calc(100dvh-64px)] w-dvw  relative">
-        <h1 className="text-6xl pt-[7%] pb-8 text-center font-medium">
+        <h1 className="text-4xl lg:text-6xl pt-[7%] pb-8 text-center font-medium">
           Do <span className="text-primary">Business</span> with <br />
           the best
         </h1>
-        <p className="text-center text-xl font-medium">
+        <p className="text-center text-lg lg:text-xl font-medium px-4 sm:px-0">
           Top vetted talent, ready to help you bring your ideas to life
         </p>
-        <p className="w-1/2 mx-auto block text-center pt-4 text-sm leading-relaxed">
+        <p className="md:w-1/2 mx-auto block text-center pt-4 text-sm leading-relaxed px-8 md:px-0">
           Connect with top-tier freelancers ready to bring your vision to life.
           Our platform offers experts in design, development, marketing, and
           writing to meet your specific needs. Discover the talent that can
           elevate your project
         </p>
-        <div className="w-full flex justify-center items-center gap-4 my-8!">
-          <Button className="uppercase px-8! py-6!">Explore Services</Button>
+        <div className="w-full flex flex-col md:flex-row justify-center items-center gap-4 my-8! px-8 md:px-0">
+          <Button className="uppercase px-8! py-6! w-full sm:w-fit">
+            Explore Services
+          </Button>
           <Button
             variant="outline"
-            className="border border-foreground px-8! py-6! uppercase"
+            className="border border-foreground px-8! py-6! uppercase w-full sm:w-fit"
           >
             Join as a Pro
           </Button>
         </div>
-        <div className="mt-[7%]">
-          <div className="border border-primary/30 rounded-full w-1/2 flex items-center justify-between pl-2 mx-auto shadow-[0_0_100px_1px_#F4802550,0_0_40px_1px_#F4802510] bg-inherit">
+        <div className="mt-[7%] px-6 md:px-0">
+          <div className="border border-primary/30 rounded-full md:w-1/2 flex items-center justify-between pl-2 mx-auto shadow-[0_0_100px_1px_#F4802550,0_0_40px_1px_#F4802510] bg-inherit">
             <Input
               className="border-0! outline-0! ring-0! shadow-none font-semibold text-sm bg-transparent"
               placeholder="Search for a skill...."
@@ -60,7 +63,7 @@ export default function Home() {
         <h1 className="text-5xl font-semibold text-center mb-12">
           Explore Top <span className="text-primary">Services</span>
         </h1>
-        <div className="w-full grid grid-cols-3 gap-6">
+        <div className="w-full grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {Array.from({ length: 6 }).map((_, i) => (
             <div
               className="w-full flex flex-col justify-start items-start gap-4"
@@ -88,10 +91,10 @@ export default function Home() {
           ))}
         </div>
         <div className="mt-[200px]">
-          <h1 className="text-5xl font-medium">
+          <h1 className="text-3xl lg:text-5xl font-medium">
             Why <span className="text-primary">Boss Pro ?</span>
           </h1>
-          <div className="mt-12 grid grid-cols-2 gap-6">
+          <div className="mt-12 grid lg:grid-cols-2 gap-6">
             <div className="w-full p-6 grid grid-cols-2 gap-6 space-y-12!">
               {why_boss.map((x, i) => (
                 <div
@@ -129,7 +132,7 @@ export default function Home() {
                   height={300}
                   width={800}
                   alt="badge-icon"
-                  className="h-[500px] w-auto aspect-[3/4] object-cover rounded-lg mx-auto border shadow-sm"
+                  className="h-[500px] w-full lg:w-auto aspect-[3/4] object-cover rounded-lg mx-auto border shadow-sm"
                 />
                 <Image
                   src="/resource/Frame 86.svg"
@@ -153,7 +156,7 @@ export default function Home() {
           <h1 className="text-5xl font-medium text-center mb-12">
             How it Works
           </h1>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-6">
             <div className="">
               <Image
                 src="/resource/how-it-works.svg"
@@ -191,7 +194,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-24 w-full rounded-4xl p-12 bg-[#EADBCE90] grid grid-cols-7">
+        <div className="mt-24 w-full rounded-4xl p-12 bg-[#EADBCE90] grid lg:grid-cols-7">
           <div className="text-4xl col-span-3">
             <h1 className="font-medium">
               Get work done in <br />
@@ -202,7 +205,7 @@ export default function Home() {
               View all categories
             </Button>
           </div>
-          <div className="col-span-4 grid grid-cols-3 gap-6">
+          <div className="col-span-4 grid lg:grid-cols-3 gap-6 mt-12 lg:mt-0">
             {cats.map((x, i) => (
               <div className="" key={i}>
                 <h4 className="text-2xl font-medium text-primary">{x.title}</h4>
@@ -220,7 +223,7 @@ export default function Home() {
         <h1 className="text-4xl mt-24 text-center font-semibold">
           Top freelancers
         </h1>
-        <div className="mt-8">
+        <div className="mt-8 overflow-x-auto whitespace-nowrap">
           <div className="flex gap-6 uppercase">
             <Button>ALL</Button>
             <Button variant="outline">Tech</Button>
@@ -230,7 +233,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-4 gap-6">
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {Array.from({ length: 8 }).map((_, i) => (
             <Card key={i}>
               <CardContent className="relative h-[200px]">
@@ -267,9 +270,9 @@ export default function Home() {
         </Button>
       </main>
       <main className="mt-24 bg-foreground text-background">
-        <div className="grid grid-cols-2 gap-6 p-24">
+        <div className="grid lg:grid-cols-2 gap-6 p-6 lg:p-24">
           <div className="space-y-12">
-            <h1 className="text-5xl font-medium">
+            <h1 className="text-3xl lg:text-5xl font-medium">
               Why Freelancers <br />
               <span className="text-primary">Choose Us</span>
             </h1>
@@ -293,7 +296,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="p-24 grid grid-cols-2 gap-6 items-center">
+        <div className="p-6 lg:p-24 grid lg:grid-cols-2 gap-6 items-center">
           <div className="space-y-6">
             <h1 className="text-6xl">
               Our Impact in <br />
@@ -309,7 +312,7 @@ export default function Home() {
             services
           </p>
         </div>
-        <div className="mt-12 px-24 grid grid-cols-4 gap-6">
+        <div className="mt-12 px-6 lg:px-24 grid lg:grid-cols-4 gap-6">
           {impact.map((x, i) => (
             <div className="space-y-2" key={i}>
               <h1 className="font-semibold text-5xl">{x.title}</h1>
@@ -329,7 +332,7 @@ export default function Home() {
           FAQ<span className="text-primary">s</span>
         </h1>
 
-        <div className="p-12 px-24 pt-0">
+        <div className="p-6 lg:p-12 lg:px-24 pt-0">
           <Accordion
             type="single"
             collapsible
@@ -340,7 +343,8 @@ export default function Home() {
               <AccordionItem value={String(i)} key={i}>
                 <AccordionTrigger className="" plus>
                   <div className="">
-                    <span className="mr-12">0{i + 1}</span> {x.title}
+                    <span className="mr-12 line-clamp-1">0{i + 1}</span>{" "}
+                    {x.title}
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="flex flex-col gap-4 text-balance">
@@ -359,36 +363,7 @@ export default function Home() {
             ))}
           </Accordion>
         </div>
-        <div className="mt-12 bg-gradient-to-r from-[#FC4A1A] to-[#F7B733] py-24 px-24 grid grid-cols-2 gap-6">
-          <h1 className="text-6xl font-medium text-background">
-            Join Our Community of <br />
-            Top Freelancers
-          </h1>
-          <div className="text-background">
-            <h5 className="text-xl">
-              Sign up now to start working on high- <br />
-              quality projects and earn competitive rates
-            </h5>
-            <p className="text-xs mt-2">
-              Create your profile in minutes and connect with clients worldwide
-            </p>
-            <div className="mt-12 items-center gap-6 grid grid-cols-2">
-              <Button
-                className="w-full bg-background text-foreground"
-                size="xlg"
-              >
-                EXPLORE SERVICE
-              </Button>
-              <Button
-                className="w-full bg-transparent! border-background"
-                variant="outline"
-                size="xlg"
-              >
-                JOIN AS A PRO
-              </Button>
-            </div>
-          </div>
-        </div>
+        <JoinComm />
       </main>
     </>
   );

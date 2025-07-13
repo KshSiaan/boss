@@ -7,14 +7,14 @@ import React from "react";
 export default function Page() {
   return (
     <>
-      <header className="h-[60dvh] w-full px-4 lg:px-[7%] grid grid-cols-2 gap-6">
-        <div className="h-full w-full flex justify-center items-center">
+      <header className="h-[60dvh] w-full px-4 lg:px-[7%] grid lg:grid-cols-2 gap-6">
+        <div className="h-full w-full flex  justify-end lg:justify-center items-end lg:items-center">
           <h1 className="text-5xl font-semibold">
             <span className="text-primary">Trusted</span> by the <br /> world’s
             largest teams
           </h1>
         </div>
-        <div className="h-full w-full flex justify-center items-center">
+        <div className="h-full w-full lg:flex justify-center items-center">
           <p className="text-muted-foreground">
             Get inspired, learn and read first-hand feedback from teams around
             the globe on how they are getting value from Dovetail
@@ -32,7 +32,10 @@ export default function Page() {
         </div>
         <section className="py-12 divide-y px-4 lg:px-[7%]">
           {Array.from({ length: 6 }).map((_, i) => (
-            <div className="h-[40dvh] grid grid-cols-2 gap-6 py-12" key={i}>
+            <div
+              className="lg:h-[40dvh] grid lg:grid-cols-2 gap-6 py-12"
+              key={i}
+            >
               <div className="flex flex-col justify-between items-start">
                 <h3 className="text-3xl font-semibold">
                   Shopify Thrives with Flexible Talent from Boss
@@ -49,12 +52,12 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-end items-center">
+              <div className="w-full flex justify-end items-center">
                 <Image
                   src="/image/service_image01.jpg"
                   height={400}
                   width={600}
-                  className="w-2/3"
+                  className="w-full lg:w-2/3"
                   alt="story_img"
                 />
               </div>

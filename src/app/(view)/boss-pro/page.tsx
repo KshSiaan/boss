@@ -27,7 +27,7 @@ export default function Page() {
         desc="Connect with top-tier freelancers ready to bring your vision to life. Our platform offers experts in design, development, marketing, and writing to meet your specific needs. Discover the talent that can elevate your project"
       />
 
-      <section className="w-full my-12 px-4 lg:px-[7%] grid grid-cols-2 gap-6">
+      <section className="w-full my-12 px-4 lg:px-[7%] grid lg:grid-cols-2 gap-6">
         <div className="">
           <h3 className="text-5xl font-semibold">
             Who <span className="text-primary">We Are</span>
@@ -46,9 +46,9 @@ export default function Page() {
             Join as a Pro
           </Button>
         </div>
-        <div className="grid grid-cols-2 gap-6 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 items-start">
           {why_boss.map((x, i) => (
-            <Card key={i} className={cn(i % 2 !== 0 && "mt-12")}>
+            <Card key={i} className={cn(i % 2 !== 0 && "lg:mt-12")}>
               <CardContent className="flex items-center justify-center">
                 <div className="p-4 bg-primary text-background rounded-full">
                   <CheckIcon className="size-8" />
@@ -66,35 +66,35 @@ export default function Page() {
         <h1 className="text-4xl font-semibold text-center mb-12">
           How to hire talent on <span className="text-primary">Boss Pro</span>
         </h1>
-        <div className="flex justify-center items-baseline gap-3">
-          <Button className="uppercase" size="xlg">
+        <div className="flex flex-col lg:flex-row justify-center items-baseline gap-3">
+          <Button className="uppercase w-full lg:w-fit" size="xlg">
             Explore the catalog
           </Button>
-          <Button variant="outline" size="xlg">
+          <Button variant="outline" className="w-full lg:w-fit" size="xlg">
             Talent comes to you
           </Button>
-          <Button variant="outline" size="xlg">
+          <Button variant="outline" className="w-full lg:w-fit" size="xlg">
             Talent comes to you
           </Button>
         </div>
 
-        <div className="mt-24 grid grid-cols-2 gap-6">
+        <div className="mt-24 grid lg:grid-cols-2 gap-6">
           <div className={cn(`pt-12 px-6 relative pb-6`)}>
             <h4
               className={cn(
-                "text-8xl font-bold absolute top-0 left-0 -z-20 text-foreground/30"
+                "text-4xl lg:text-8xl font-bold absolute top-0 left-0 -z-20 text-foreground/30"
               )}
             >
               01
             </h4>
             <h2 className="text-4xl font-semibold pb-2">Explore the Catalog</h2>
-            <p className="w-3/4 text-foreground! leading-relaxed">
+            <p className="lg:w-3/4 text-foreground! leading-relaxed">
               Connect with top-tier freelancers ready to bring your vision to
               life. Our platform offers experts in design, development,
               marketing, and writing to meet your specific needs. Discover the
               talent that can elevate your project
             </p>
-            <div className="mt-12 space-x-6">
+            <div className="mt-12 space-x-6 space-y-3">
               <Button size="lg">Explore Services</Button>
               <Button variant="outline" size="lg" className="uppercase">
                 Join as a Pro

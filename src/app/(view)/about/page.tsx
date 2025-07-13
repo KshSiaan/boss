@@ -22,7 +22,7 @@ export default function Page() {
       />
       <main>
         <AboutGrid />
-        <section className="w-full my-12 mt-[20dvh] px-4 lg:px-[7%] grid grid-cols-2 gap-6">
+        <section className="w-full my-12 mt-[20dvh] px-4 lg:px-[7%] grid lg:grid-cols-2 gap-6">
           <div className="">
             <h3 className="text-5xl font-semibold">
               Who <span className="text-primary">We Are</span>

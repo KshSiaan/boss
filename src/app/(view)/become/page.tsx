@@ -38,7 +38,7 @@ export default function Page() {
           <h1 className="text-5xl pt-[7%] pb-8 text-center font-medium">
             Bring on the <span className="text-primary">benefits</span>
           </h1>
-          <div className="mt-12 px-4 lg:px-[7%] grid grid-cols-3 gap-6 mb-12">
+          <div className="mt-12 px-4 lg:px-[7%] grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {benefits.map((x, i) => (
               <Card
                 key={i}
