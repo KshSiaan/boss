@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import React from "react";
 
 export default function HeroSec({
@@ -20,8 +21,8 @@ export default function HeroSec({
         {desc}
       </p>
       <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-4 my-8!">
-        <Button className="uppercase px-8! py-6! w-full lg:w-auto">
-          Explore Services
+        <Button className="uppercase px-8! py-6! w-full lg:w-auto" asChild>
+          <Link href={"/services"}>Explore Services</Link>
         </Button>
         <Button
           variant="outline"
