@@ -1,7 +1,6 @@
 import FAQSec from "@/components/core/extra/faq-sec";
 import JoinComm from "@/components/core/extra/join-comm";
 import ServiceCard from "@/components/core/extra/service-card";
-import { Button } from "@/components/ui/button";
 import {
   Pagination,
   PaginationContent,
@@ -17,7 +16,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Image from "next/image";
 import React from "react";
 
 export default function Page() {

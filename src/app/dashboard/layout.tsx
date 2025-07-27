@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { BellIcon, SearchIcon, Settings } from "lucide-react";
+import Link from "next/link";
 
 export default function Layout({
   children,
@@ -38,8 +39,11 @@ export default function Layout({
                 className="rounded-full border-0!"
                 variant="outline"
                 size="icon"
+                asChild
               >
-                <BellIcon />
+                <Link href={"/dashboard/notification"}>
+                  <BellIcon />
+                </Link>
               </Button>
               <Button
                 className="rounded-full border-0!"

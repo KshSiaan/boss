@@ -17,6 +17,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import JoinComm from "@/components/core/extra/join-comm";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -36,7 +37,7 @@ export default function Home() {
           elevate your project
         </p>
         <div className="w-full flex flex-col md:flex-row justify-center items-center gap-4 my-8! px-8 md:px-0">
-          <Button className="uppercase px-8! py-6! w-full sm:w-fit">
+          <Button className="uppercase px-8! py-6! w-full sm:w-fit" asChild>
             Explore Services
           </Button>
           <Button
@@ -265,8 +266,8 @@ export default function Home() {
             </Card>
           ))}
         </div>
-        <Button className="uppercase mx-auto! flex mt-12" size="xlg">
-          View all
+        <Button className="uppercase mx-auto! flex mt-12" size="xlg" asChild>
+          <Link href={"/freelancers"}>View all</Link>
         </Button>
       </main>
       <main className="mt-24 bg-foreground text-background">
