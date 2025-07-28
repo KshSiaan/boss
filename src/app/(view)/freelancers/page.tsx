@@ -18,32 +18,46 @@ import {
 } from "@/components/ui/pagination";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+
 export default function Page() {
   return (
     <main>
-      <div className="px-4 lg:px-[7%] mb-12">
-        <h1 className="text-4xl mt-24 text-center font-semibold">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-[7%] mb-12">
+        <h1 className="text-3xl sm:text-4xl mt-16 sm:mt-24 text-center font-semibold">
           Top freelancers
         </h1>
-        <div className="mt-8 overflow-x-auto whitespace-nowrap flex items-center justify-between">
-          <div className="flex gap-6 uppercase">
-            <Button>ALL</Button>
-            <Button variant="outline">Tech</Button>
-            <Button variant="outline">Design</Button>
-            <Button variant="outline">marketing</Button>
-            <Button variant="outline">accounts</Button>
+
+        <div className="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-6 uppercase justify-center md:justify-start">
+            <Button size="sm" className="min-w-[80px]">
+              ALL
+            </Button>
+            <Button size="sm" variant="outline" className="min-w-[80px]">
+              Tech
+            </Button>
+            <Button size="sm" variant="outline" className="min-w-[80px]">
+              Design
+            </Button>
+            <Button size="sm" variant="outline" className="min-w-[80px]">
+              Marketing
+            </Button>
+            <Button size="sm" variant="outline" className="min-w-[80px]">
+              Accounts
+            </Button>
           </div>
-          <div className="flex items-center gap-2">
+
+          <div className="flex w-full md:w-auto items-center justify-center md:justify-end gap-2">
             <Input
-              className="rounded-full outline-0! ring-0! w-[20dvw] border-foreground!"
+              className="w-full sm:w-[250px] md:w-[300px] rounded-full"
               placeholder="Search freelancers"
             />
-            <Button size={"icon"} className="rounded-full">
+            <Button size="icon" className="rounded-full">
               <SearchIcon />
             </Button>
           </div>
         </div>
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {Array.from({ length: 24 }).map((_, i) => (
             <Card key={i}>
               <CardContent className="relative h-[200px]">
@@ -56,19 +70,24 @@ export default function Page() {
                 />
               </CardContent>
               <CardHeader className="flex flex-row justify-between items-start">
-                <div className="">
-                  <div className="flex text-lg items-center font-semibold">
-                    John Doe <BadgeCheckIcon className="text-blue-600 ml-2" />
+                <div>
+                  <div className="flex text-base sm:text-lg items-center font-semibold">
+                    John Doe{" "}
+                    <BadgeCheckIcon className="text-blue-600 ml-2 size-5 sm:size-6" />
                   </div>
-                  <p>Product Manager</p>
-                  <div className="flex items-center mt-1 text-muted-foreground">
-                    <MapPinIcon className="mr-1 size-5 text-primary" />{" "}
+                  <p className="text-sm sm:text-base">Product Manager</p>
+                  <div className="flex items-center mt-1 text-muted-foreground text-sm">
+                    <MapPinIcon className="mr-1 size-4 sm:size-5 text-primary" />
                     Manchester
                   </div>
                 </div>
               </CardHeader>
               <CardFooter>
-                <Button variant="outline" className="w-full py-5!" asChild>
+                <Button
+                  variant="outline"
+                  className="w-full py-3 sm:py-5"
+                  asChild
+                >
                   <Link href={"/freelancers/profile"}>HIRE</Link>
                 </Button>
               </CardFooter>
@@ -76,6 +95,7 @@ export default function Page() {
           ))}
         </div>
       </div>
+
       <div className="flex items-center justify-center mb-12">
         <Pagination>
           <PaginationContent>

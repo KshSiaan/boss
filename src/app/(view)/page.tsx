@@ -18,6 +18,14 @@ import {
 } from "@/components/ui/accordion";
 import JoinComm from "@/components/core/extra/join-comm";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import JoinPopup from "@/components/core/join-popup";
 
 export default function Home() {
   return (
@@ -40,12 +48,22 @@ export default function Home() {
           <Button className="uppercase px-8! py-6! w-full sm:w-fit" asChild>
             Explore Services
           </Button>
-          <Button
-            variant="outline"
-            className="border border-foreground px-8! py-6! uppercase w-full sm:w-fit"
-          >
-            Join as a Pro
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="outline"
+                className="border border-foreground px-8! py-6! uppercase w-full sm:w-fit"
+              >
+                Join as a Pro
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="min-w-[90dvw] rounded-4xl">
+              <DialogHeader>
+                <DialogTitle></DialogTitle>
+              </DialogHeader>
+              <JoinPopup />
+            </DialogContent>
+          </Dialog>
         </div>
         <div className="mt-[7%] px-6 md:px-0">
           <div className="border border-primary/30 rounded-full md:w-1/2 flex items-center justify-between pl-2 mx-auto shadow-[0_0_100px_1px_#F4802550,0_0_40px_1px_#F4802510] bg-inherit">
@@ -85,11 +103,21 @@ export default function Home() {
                 className="w-full border-foreground uppercase"
                 variant="outline"
                 size="lg"
+                asChild
               >
-                View service
+                <Link href={"/services/service"}>View service</Link>
               </Button>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-12">
+          <Button
+            className="w-full lg:w-1/2 py-5! mt-12 text-lg"
+            size={"xlg"}
+            asChild
+          >
+            <Link href={"/services"}>Vew All Services</Link>
+          </Button>
         </div>
         <div className="mt-[200px]">
           <h1 className="text-3xl lg:text-5xl font-medium">
@@ -117,13 +145,22 @@ export default function Home() {
                 </div>
               ))}
               <div className="">
-                <Button
-                  variant="outline"
-                  size="xlg"
-                  className="uppercase font-medium"
-                >
-                  Join as a Pro
-                </Button>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button
+                      variant="outline"
+                      className="border border-foreground px-8! py-6! uppercase w-full sm:w-fit"
+                    >
+                      Join as a Pro
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="min-w-[90dvw] rounded-4xl">
+                    <DialogHeader>
+                      <DialogTitle></DialogTitle>
+                    </DialogHeader>
+                    <JoinPopup />
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
             <div className="w-full h-full p-6! relative">
@@ -259,8 +296,8 @@ export default function Home() {
                 </div>
               </CardHeader>
               <CardFooter>
-                <Button variant="outline" className="w-full py-5!">
-                  HIRE
+                <Button variant="outline" className="w-full py-5!" asChild>
+                  <Link href={"/freelancers/profile"}>HIRE</Link>
                 </Button>
               </CardFooter>
             </Card>

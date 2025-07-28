@@ -88,7 +88,7 @@ export default function SignIn() {
               <div className="flex items-center gap-2">
                 <Checkbox /> <Label>Remember Me</Label>
               </div>
-              <Link href="/reset" className="text-sm font-semibold underline">
+              <Link href="/forgot" className="text-sm font-semibold underline">
                 Reset Password
               </Link>
             </div>

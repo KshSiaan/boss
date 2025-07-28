@@ -9,8 +9,8 @@ export default function Page() {
   const [paid, setPaid] = useState(false);
   const stripePromise = loadStripe("pk_test_qblFNYngBkEdjEZ16jxxoWSM");
   return (
-    <main className="min-h-[70dvh] flex justify-center items-center">
-      <div className="w-1/2 h-auto">
+    <main className="min-h-[70dvh] p-6 flex justify-center items-center">
+      <div className="w-full lg:w-1/2 h-auto">
         {paid ? (
           renderSuccess()
         ) : (
@@ -37,13 +37,13 @@ export default function Page() {
 const renderSuccess = () => {
   return (
     <>
-      <div className="h-[50dvh] w-[50dvw] flex flex-col justify-center items-center gap-6 border rounded-xl">
+      <div className="h-[50dvh] lg:w-[50dvw] flex flex-col justify-center items-center gap-6 border rounded-xl">
         <CheckCircle2Icon className="size-[100px] text-green-600" />
         <h1 className="text-3xl">Payment successful</h1>
         <p>Thank you for your payment. Your Order is proceed</p>
       </div>
       <div className="w-full flex items-center justify-center mt-6">
-        <Button className="text-lg" size={"xlg"} variant={"outline"} asChild>
+        <Button className="lg:text-lg" size={"xlg"} variant={"outline"} asChild>
           <Link href={"/services"}>
             Discover Other Services <ArrowUpRightIcon className="size-6" />
           </Link>
