@@ -35,10 +35,10 @@ export default function Page() {
         <Button asChild>
           <Link href="jobs/post">Post a job</Link>
         </Button>{" "}
-        <span>OR</span>{" "}
+        {/* <span>OR</span>{" "}
         <Button className="" variant="outline">
           Use AI
-        </Button>
+        </Button> */}
       </div>
       <section className="flex-1 w-full mt-6 flex flex-col justify-start items-start">
         <h2 className="text-xl font-semibold">

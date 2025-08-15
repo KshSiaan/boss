@@ -104,7 +104,11 @@ export default function SignIn() {
             </Button>
             <p className="text-center">
               Not a member yet?
-              <Button variant="link" className="underline text-primary">
+              <Button
+                type="button"
+                variant="link"
+                className="underline text-primary"
+              >
                 Join Now
               </Button>
             </p>

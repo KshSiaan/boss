@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
+import { AnimatedToggle } from "./extra/type-signer";
 export default function JoinPopup() {
   return (
     <div className="w-full h-[70dvh] lg:h-[80dvh] grid lg:grid-cols-2 gap-6">
@@ -17,6 +18,9 @@ export default function JoinPopup() {
           <h1 className="capitalize text-xl lg:text-4xl mb-6 lg:mb-12 font-medium">
             Create your free Boss Account
           </h1>
+        </div>
+        <div className="flex justify-center items-center w-full">
+          <AnimatedToggle />
         </div>
         <div className="w-full space-y-6">
           <Button className="w-full" size="xlg">

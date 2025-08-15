@@ -9,18 +9,9 @@ import {
   SidebarMenu,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import {
-  BriefcaseBusinessIcon,
-  FileTextIcon,
-  HouseIcon,
-  MapPinnedIcon,
-  SettingsIcon,
-  UsersIcon,
-  WalletCardsIcon,
-} from "lucide-react";
+import { BriefcaseBusinessIcon, HouseIcon, SettingsIcon } from "lucide-react";
 import Link from "next/link";
-
-const preURL = "/dashboard";
+const preURL = "/provider";
 const data = {
   navMain: [
     {
@@ -32,26 +23,6 @@ const data = {
       icon: BriefcaseBusinessIcon,
       title: "Jobs",
       url: `${preURL}/jobs`,
-    },
-    {
-      icon: UsersIcon,
-      title: "Talents",
-      url: `${preURL}/talents`,
-    },
-    {
-      icon: MapPinnedIcon,
-      title: "Locations",
-      url: `${preURL}/locations`,
-    },
-    {
-      icon: WalletCardsIcon,
-      title: "Budget",
-      url: `${preURL}/budget`,
-    },
-    {
-      icon: FileTextIcon,
-      title: "Reporting",
-      url: `${preURL}/reporting`,
     },
     {
       icon: SettingsIcon,

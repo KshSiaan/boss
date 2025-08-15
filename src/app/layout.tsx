@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/next";
 // Load Montserrat with all available weights
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -24,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${montserrat.className} antialiased overflow-x-hidden`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -2,7 +2,7 @@ import ServiceCard from "@/components/core/extra/service-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { StarIcon } from "lucide-react";
+// import { StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -38,11 +38,11 @@ export default function Page() {
               <span className="font-semibold">Service Duration:</span>
               <span>3 weeks - 2 months</span>
             </p>
-            <p className="flex justify-between items-center text-sm sm:text-base">
+            {/* <p className="flex justify-between items-center text-sm sm:text-base">
               <span className="font-semibold">Starts from:</span>
               <span className="text-green-600 font-bold">45$</span>
-            </p>
-            <p className="flex justify-between items-center text-sm sm:text-base">
+            </p> */}
+            {/* <p className="flex justify-between items-center text-sm sm:text-base">
               <span className="font-semibold">Rating:</span>
               <span className="flex items-center gap-2">
                 <span>(4.00)</span>
@@ -57,17 +57,17 @@ export default function Page() {
                   ))}
                 </span>
               </span>
-            </p>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            </p> */}
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-1 gap-4 sm:gap-6">
               <Button className="h-12 sm:h-14 w-full" asChild>
-                <Link href={"/services/service/payment"}>Book Service</Link>
+                <Link href={"/services/service/job"}>Book Service</Link>
               </Button>
-              <Button
+              {/* <Button
                 className="h-12 sm:h-14 w-full uppercase"
                 variant={"outline"}
               >
                 Request a quote
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
